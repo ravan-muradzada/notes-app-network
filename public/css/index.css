@@ -1,0 +1,156 @@
+/* Reset and basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+}
+
+.navbar h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+/* Main content */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 80px); /* Adjust for header height */
+    background-color: #f4f4f9;
+}
+
+.container {
+    text-align: center;
+    max-width: 900px;
+    width: 100%;
+    padding: 30px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-top: 30px;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+p {
+    font-size: 1rem;
+    margin-bottom: 30px;
+    color: #777;
+}
+
+/* Links container */
+.links-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.link-card {
+    background-color: #fff;
+    border: 2px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #333;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.link-card:hover {
+    transform: translateY(-5px);
+    border-color: #4CAF50;
+}
+
+.link-card .icon {
+    width: 50px;
+    height: 50px;
+    background-color: #4CAF50;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.link-card .create-icon {
+    background-image: url('/images/create-icon.svg'); /* Add your own icon */
+    background-size: cover;
+}
+
+.link-card .view-icon {
+    background-image: url('/images/view-icon.svg'); /* Add your own icon */
+    background-size: cover;
+}
+
+.link-card .update-icon {
+    background-image: url('/images/update-icon.svg'); /* Add your own icon */
+    background-size: cover;
+}
+
+.link-card .delete-icon {
+    background-image: url('/images/delete-icon.svg'); /* Add your own icon */
+    background-size: cover;
+}
+
+h3 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.875rem;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Media Queries for better responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .link-card {
+        padding: 15px;
+    }
+
+    .link-card h3 {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar h1 {
+        font-size: 2rem;
+    }
+
+    .links-container {
+        grid-template-columns: 1fr;
+    }
+}
